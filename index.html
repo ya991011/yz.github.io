@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  // 页面加载后自动跳转（或通过按钮触发）
+  window.onload = function() {
+    const appid = 'wx34b325355fe4885f';
+    const redirect_uri = encodeURIComponent('https://your-domain.com/auth_callback');
+    const scope = 'snsapi_userinfo'; // 需要用户手动授权
+    const authUrl = `https://open.weixin.qq.com/connect/oauth2/authorize?appid=${appid}&redirect_uri=${redirect_uri}&response_type=code&scope=${scope}&state=123#wechat_redirect`;
+    window.location.href = authUrl;
+  };
+</script>
+</body>
+</html>
